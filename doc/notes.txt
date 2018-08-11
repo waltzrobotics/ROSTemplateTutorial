@@ -1,0 +1,36 @@
+quick reference:
+    source ~/template_ws/ros_template_ws/devel/setup.bash
+
+
+todo:
+    Add new package to add in (messages?)
+    create new custom message to publish
+    add to parameter service
+    separate scripts to use in bash for evaluation (with instructions)
+    
+
+
+template:
+    - similarities between using roslaunch & rosrun
+
+
+
+
+
+
+
+debug:
+    - roswtf - 
+    - rosnode list - list out all active nodes
+        able to ping
+    - rostopic list - list out all active topics
+
+
+
+
+random:
+    rosed? -- open or use of editor
+    rosrun rqt_console -> attaches to logging framework to display output from notes
+    rosrun rqt_logger_level change message verbosity
+
+    might have wrong folder structure for template project
