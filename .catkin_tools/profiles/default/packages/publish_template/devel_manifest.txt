@@ -1,0 +1,4 @@
+.
+/home/wwaltz/work/templates/ROSTemplateTutorial/devel/.private/publish_template/lib/pkgconfig/publish_template.pc /home/wwaltz/work/templates/ROSTemplateTutorial/devel/lib/pkgconfig/publish_template.pc
+/home/wwaltz/work/templates/ROSTemplateTutorial/devel/.private/publish_template/share/publish_template/cmake/publish_templateConfig.cmake /home/wwaltz/work/templates/ROSTemplateTutorial/devel/share/publish_template/cmake/publish_templateConfig.cmake
+/home/wwaltz/work/templates/ROSTemplateTutorial/devel/.private/publish_template/share/publish_template/cmake/publish_templateConfig-version.cmake /home/wwaltz/work/templates/ROSTemplateTutorial/devel/share/publish_template/cmake/publish_templateConfig-version.cmake
