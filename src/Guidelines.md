@@ -1,19 +1,18 @@
-#Guidelines
+# Guidelines
 
-
-##pub_example1.py
+## pub_example1.py
 
 This file initializes a topic_name of a specific type String.
 Initializes anonymous node named 'talker.'
 Publish at specified rate with specific type String.
 
-##sub_example1.py
+## sub_example1.py
 
 Initializes anonymous node 'listener'
 Subscribes to topic 'chatter' expecting specific type String.
 Set node to continue until shutdown.
 
-##Debugging:
+## Debugging
 
 rostopic list
     /chatter

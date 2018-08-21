@@ -1,6 +1,8 @@
 quick reference:
     source ~/template_ws/ros_template_ws/devel/setup.bash
 
+    source ~/work/templates/ROSTemplateTutorial/devel/setup.bash
+
 
 todo:
     Add new package to add in (messages?)
