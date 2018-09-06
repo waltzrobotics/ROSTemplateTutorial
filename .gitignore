@@ -11,4 +11,8 @@ CATKIN_IGNORE
 # qcreator stuff
 CMakeLists.txt.user
 
+# ignore catkin
+.catkin_tools/
 
+#ignore vscode
+.vscode/

@@ -6,6 +6,8 @@
 #include <ros.h>
 #include <std_msgs/String.h>
 
+// /opt/ros/kinetic/lib/rosserial_python/serial_node.py
+
 ros::NodeHandle  nh;
 
 std_msgs::String str_msg;
@@ -24,5 +26,5 @@ void loop()
   str_msg.data = hello;
   chatter.publish( &str_msg );
   nh.spinOnce();
-  delay(1000);
+  delay(1);
 }
