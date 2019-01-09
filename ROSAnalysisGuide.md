@@ -1,6 +1,8 @@
 # ROS Analysis / Debug Guide
 
-This guide was built as an aid for analysis and uses ROS template as the example platform.
+This guide was built as an aid for analysis and uses ROS template as the example platform (only command line).
+
+TODO: outline rqt and plugins
 
 ## pub_example1.py
 
