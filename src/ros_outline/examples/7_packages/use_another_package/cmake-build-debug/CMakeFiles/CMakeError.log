@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/wwaltz/Desktop/robot_notes/ros/src/ros_outline/examples/7_packages/use_another_package/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e855c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e855c.dir/build.make CMakeFiles/cmTC_e855c.dir/build
+make[1]: Entering directory '/home/wwaltz/Desktop/robot_notes/ros/src/ros_outline/examples/7_packages/use_another_package/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e855c.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e855c.dir/CheckSymbolExists.c.o   -c /home/wwaltz/Desktop/robot_notes/ros/src/ros_outline/examples/7_packages/use_another_package/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e855c
+/home/wwaltz/Desktop/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e855c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e855c.dir/CheckSymbolExists.c.o  -o cmTC_e855c 
+CMakeFiles/cmTC_e855c.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e855c.dir/build.make:86: recipe for target 'cmTC_e855c' failed
+make[1]: *** [cmTC_e855c] Error 1
+make[1]: Leaving directory '/home/wwaltz/Desktop/robot_notes/ros/src/ros_outline/examples/7_packages/use_another_package/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_e855c/fast' failed
+make: *** [cmTC_e855c/fast] Error 2
+
+File /home/wwaltz/Desktop/robot_notes/ros/src/ros_outline/examples/7_packages/use_another_package/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/wwaltz/Desktop/robot_notes/ros/src/ros_outline/examples/7_packages/use_another_package/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_04dfb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_04dfb.dir/build.make CMakeFiles/cmTC_04dfb.dir/build
+make[1]: Entering directory '/home/wwaltz/Desktop/robot_notes/ros/src/ros_outline/examples/7_packages/use_another_package/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_04dfb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_04dfb.dir/CheckFunctionExists.c.o   -c /home/wwaltz/Desktop/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_04dfb
+/home/wwaltz/Desktop/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04dfb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_04dfb.dir/CheckFunctionExists.c.o  -o cmTC_04dfb -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_04dfb.dir/build.make:86: recipe for target 'cmTC_04dfb' failed
+make[1]: *** [cmTC_04dfb] Error 1
+make[1]: Leaving directory '/home/wwaltz/Desktop/robot_notes/ros/src/ros_outline/examples/7_packages/use_another_package/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_04dfb/fast' failed
+make: *** [cmTC_04dfb/fast] Error 2
+
+

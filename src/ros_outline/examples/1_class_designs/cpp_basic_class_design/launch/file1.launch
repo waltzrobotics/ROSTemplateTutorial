@@ -1,0 +1,32 @@
+<launch>
+  <machine name="waltz-laptop" address="10.0.190.0"
+    env-loader="/opt/ros/kinetic/env.sh"
+    user="waltzrobotics"    password="m14xn25y" 
+     
+  />
+
+  <!-- address="10.1.3.1" -->
+<!-- machine name="waltz-laptop" address="172.17.0.1" -->
+   <!-- <machine name="foo2" address="192.168.1.100" ssh-port="22"
+    env-loader="/opt/ros/kinetic/env.sh"
+    user="waltzrobotics"    password="m14xn25y" 
+  /> -->
+    <!-- 
+    user="waltzrobotics"    password="m14xn25y" 
+
+    ros-root="$(env ROS_ROOT)"
+    <env name="LUCKY_NUMBER" value="13" user="waltzrobotics"  user="someone" /> 
+    env-loader="/opt/ros/fuerte/env.sh"-->
+  <!-- </machine> env-loader="/opt/ros/kinetic/setup.bash"-->
+
+  <!-- <node machine="foo" name="footalker" pkg="test_ros" type="talker.py" /> -->
+<!-- <node name="rviz" pkg="rviz" type="rviz" required="true"  /> -->
+
+<!-- <node machine="foo" name="rviz" pkg="rviz" type="rviz"   /> -->
+
+<node name="$(anon rviz)" pkg="rviz" type="rviz" respawn="false" />
+ <!-- machine="waltz-laptop" -->
+<!-- port="30000" -->
+<!-- <node name="rviz" pkg="rviz" type="rviz" required="true"  /> -->
+
+</launch>

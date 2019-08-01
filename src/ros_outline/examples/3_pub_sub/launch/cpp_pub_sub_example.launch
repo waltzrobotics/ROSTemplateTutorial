@@ -1,0 +1,6 @@
+<<?xml version="1.0"?>
+<launch>
+    <node pkg="pub_sub" type="pub_example" name="pub_example" />
+    <node pkg="pub_sub" type="sub_example" name="sub_example" output="log" respawn="false" respawn_delay="0" />
+    
+</launch>>

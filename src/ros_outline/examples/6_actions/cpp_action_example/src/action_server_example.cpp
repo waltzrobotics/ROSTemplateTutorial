@@ -67,8 +67,6 @@ public:
       as_.setSucceeded(result_);
     }
   }
-
-
 };
 
 

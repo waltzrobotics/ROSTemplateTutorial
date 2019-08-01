@@ -1,5 +1,12 @@
 
 
+- set/get through launch file
+- set/get through command line
+- code
+
+- search strings? maps?
+
+
 many ways to load parameters 
 
 get references
@@ -17,3 +24,30 @@ cover remapping here
 
   
 joint1_gains: {p: 7.0, i: 8.0, d: 9.0}
+
+
+
+Command line entries:
+
+```
+rosparam list
+
+rosparam get /parameter_name
+
+rosparam set /parameter_name <type> <value>
+
+rosparam set /parameter_name /std_msgs <value>
+```
+
+Use within node:
+
+
+### TODO / Issues
+
+- what is standard operation for changing parameters at run-time?
+- how are arguments handled during reconfigure / launch
+- 
+
+
+
+## Reference 

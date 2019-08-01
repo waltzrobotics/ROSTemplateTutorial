@@ -22,7 +22,7 @@ class ROSClassTemplate
         /* constructors and deconstructors */
         ROSClassTemplate();
         ROSClassTemplate(ros::NodeHandle* nodehandle);       
-        ~ROSClassTemplate();
+        //~ROSClassTemplate();
 
     private:
         ros::NodeHandle _nodeHandle;                        // only needed if maintaining a passed node
