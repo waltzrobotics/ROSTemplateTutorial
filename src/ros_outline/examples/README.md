@@ -9,6 +9,11 @@ Files that directly support a particular node design are found in the src folder
 ## Outline
 
 
+
+## Docker
+
+The examples are intended to also be compatible with docker containers for repeatability and to introduce the concept of docker containers into the ROS ecosystem. 
+
 ### Examples
 
 1. cpp_basic_class_design

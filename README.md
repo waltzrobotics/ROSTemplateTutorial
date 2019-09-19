@@ -5,6 +5,13 @@ This project is created to serve as yet another ROS starting point.  This tutori
 1. Ubuntu 16.04
 2. ROS Kinetic
 
+```shell script
+docker run -it --rm -v /media/wwaltz/ISA-Work/_external_only/personal/repositories/ROSTemplateTutorial:/home/wwaltz/work --net=host --name waltz1 waltz:base
+docker run -it --rm -v /home/wwaltz/hdd/projections/ros_development/ROSTemplateTutorial_copied:/home/wwaltz/work --net=host --name waltz1 waltz:base
+
+
+```
+
 ## Preparation
 
 1. Clone repository

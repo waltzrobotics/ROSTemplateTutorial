@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="limited" default="false" doc="If true, 
+    limits joint range [-PI, PI] on all joints." />
+  <arg name="paused" default="false" doc="Starts gazebo in paused mode" />
+  <arg name="gui" default="true" doc="Starts gazebo gui" />
+  
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" default="worlds/empty.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  <!-- send robot urdf to param server -->
+  <include file="$(find ur_description_original)/launch/ur3_upload.launch">
+    <arg name="limited" value="$(arg limited)"/>
+  </include>
+
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" 
+    args="-urdf -param robot_description -model robot -z 0.1" 
+    respawn="false" output="screen" />
+
+  <include file="$(find ur_gazebo_original)/launch/controller_utils.launch"/>
+
+  <rosparam file="$(find ur_gazebo_original)/controller/arm_controller_ur3.yaml"
+    command="load"/>
+  
+  <node name="arm_controller_spawner" pkg="controller_manager" 
+    type="controller_manager" args="spawn arm_controller" 
+    respawn="false" output="screen"/>
+
+</launch>
+
+--------------------------------------------------------------------------------
+
+<?xml version="1.0"?>
+<launch>
+  <arg name="limited" 
+    default="false" doc="If true, limits joint range [-PI, PI] on all joints."/>
+  
+  <param unless="$(arg limited)" name="robot_description" 
+    command="$(find xacro)/xacro --inorder 
+    '$(find ur_description_original)/urdf/ur3_robot.urdf.xacro'" />
+
+  <param if="$(arg limited)" name="robot_description" 
+    command="$(find xacro)/xacro --inorder 
+    '$(find ur_description_original)/urdf/ur3_joint_limited_robot.urdf.xacro'"/>
+</launch>
+
+--------------------------------------------------------------------------------
+
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Robot state publisher -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" 
+    name="robot_state_publisher">
+    
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" type="string" value="" />
+  </node>
+
+  <!-- Fake Calibration -->
+  <node pkg="rostopic" type="rostopic" name="fake_joint_calibration"
+        args="pub /calibrated std_msgs/Bool true" />
+  
+  <!-- joint_state_controller -->
+  <rosparam 
+    file="$(find ur_gazebo_original)/controller/joint_state_controller.yaml" 
+    command="load"/>
+  
+  <node name="joint_state_controller_spawner" pkg="controller_manager" 
+    type="controller_manager" args="spawn joint_state_controller" 
+    respawn="false" output="screen"/>
+  
+</launch>
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
