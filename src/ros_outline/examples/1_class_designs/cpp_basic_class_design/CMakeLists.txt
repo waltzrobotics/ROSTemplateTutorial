@@ -218,7 +218,8 @@ include_directories(
 
 
 add_executable(basic_class_design   src/cpp_class_design_full.cpp
-                                    src/cpp_run_node_example.cpp)
+                                    src/cpp_run_node_example.cpp
+                                    include/cpp_class.h)
 
 add_dependencies(basic_class_design ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 

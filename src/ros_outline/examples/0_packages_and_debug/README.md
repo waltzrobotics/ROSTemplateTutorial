@@ -20,6 +20,8 @@ To create a package complete with dependencies, invoke the following:
 
 ```shell script
 catkin create pkg pkg_name_here --catkin-deps roscpp rospy
+
+catkin create pkg ros_database_msgs --catkin-deps roscpp rospy message_generation message_runtime
 ```
 
 ## Inspecting Package Dependencies
