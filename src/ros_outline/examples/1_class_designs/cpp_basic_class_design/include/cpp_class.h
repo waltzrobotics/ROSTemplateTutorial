@@ -1,7 +1,5 @@
-
 #ifndef EXAMPLE_ROS_NODE_CLASS_H_
 #define EXAMPLE_ROS_NODE_CLASS_H_
-
 
 #include <ros/ros.h>                                        // Essential for all ROS nodes
 
@@ -15,26 +13,23 @@
 #include <string>
 #include <vector>
 
-
 class ROSClassTemplate
 {
     public:
         /* constructors and deconstructors */
         ROSClassTemplate();
         ROSClassTemplate(ros::NodeHandle* nodehandle);       
-        //~ROSClassTemplate();
+        ~ROSClassTemplate();
 
     private:
-        ros::NodeHandle _nodeHandle;                        // only needed if maintaining a passed node
-        
+        ros::NodeHandle *_nh;                        // only needed if maintaining a passed node        
         /* include only as needed ;; consider instantiation in constructor */
         ros::Subscriber _sub;
-        ros::Publisher  _pub;
-        
+        ros::Publisher  _pub;        
         /* internal member variables / properties */
-        double _classVariable;
-        
+        double _classVariable;      
         /* helper members */
+
         /* ALTERNATIVE INITIALIZATION MEMBERS IF NEEDED */
         /*
         void initializeSubscribers();
@@ -42,5 +37,6 @@ class ROSClassTemplate
         void initializePublishers();
         */
 };
-
 #endif  // EXAMPLE_ROS_NODE_CLASS_H_
+
+/* END HEADER -----------------------------------------------------------------------------*/

@@ -28,6 +28,15 @@ docker run -it --rm -v /home/wwaltz/hdd/projections/ros_development/ROSTemplateT
 
 rosrun <package_name> <script>
 
+
+## Development Environment
+
+```shell
+ln -s /home/wwaltz/hdd/projects/ros_development/ROSTemplateTutorial/src/ros_outline/examples/8_dynamic_reconfigure /home/wwaltz/test_ws/src/
+ln -s /home/wwaltz/hdd/projects/ros_development/ROSTemplateTutorial/src/ros_outline/examples/dynamic_reconfigure_8 /home/wwaltz/test_ws/src/
+```
+
+
 ## References
 
 ## TODO

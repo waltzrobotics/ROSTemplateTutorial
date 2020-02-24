@@ -17,7 +17,7 @@
  *------------------------------------------------------------------*/
 
 /* includes */
-#include "rosclasstemplate.h"
+#include "cpp_class.h"
 
 using std::string;
 
