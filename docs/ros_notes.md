@@ -50,6 +50,15 @@ pass_all_args="true|false" (optional Default: false) (New in Indigo and Jade as 
 If true, then all args set in the current context are added to the child context that is created for processing the included file. You can do this instead of explicitly listing each argument that you want to pass down.
 ```
 
+roslaunch notes:
+
+```xml
+<!-- <node pkg="node_pkg" type="node_type" name="node_name" 
+      if="$(eval arg_name == 'desired_value')"/> -->
+
+<!-- if="$(arg host)" -->
+```
+
 ## Kinematics
 
 ur_
